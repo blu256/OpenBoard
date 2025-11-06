@@ -67,6 +67,9 @@ class UBGraphicsTextItem : public QGraphicsTextItem, public UBItem, public UBRes
         qreal textHeight() const;
         qreal pixelsPerPoint() const;
 
+        void setLineHeight(qreal lineHeight);
+        qreal lineHeight() const;
+
         void contentsChanged();
 
         virtual void resize(qreal w, qreal h);
@@ -128,6 +131,7 @@ class UBGraphicsTextItem : public QGraphicsTextItem, public UBItem, public UBRes
         virtual QVariant itemChange(GraphicsItemChange change, const QVariant &value);
 
         qreal mTextHeight;
+        qreal mLineHeight;
 
         int mMultiClickState;
         QTime mLastMousePressTime;

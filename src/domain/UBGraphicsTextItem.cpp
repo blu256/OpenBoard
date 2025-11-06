@@ -50,6 +50,7 @@ UBGraphicsTextItem::UBGraphicsTextItem(QGraphicsItem * parent)
     , mMultiClickState(0)
     , mLastMousePressTime(QTime::currentTime())
     , isActivatedTextEditor(true)
+    , mLineHeight(1)
 {
     setDelegate(new UBGraphicsTextItemDelegate(this, 0));
 
@@ -374,6 +375,7 @@ void UBGraphicsTextItem::copyItemParameters(UBItem *copy) const
         cp->setData(UBGraphicsItemData::ItemEditable, data(UBGraphicsItemData::ItemEditable).toBool());
         cp->setTextWidth(this->textWidth());
         cp->setTextHeight(this->textHeight());
+        cp->setLineHeight(this->lineHeight());
 
         cp->setSourceUrl(this->sourceUrl());
         cp->setZValue(this->zValue());
@@ -454,6 +456,28 @@ qreal UBGraphicsTextItem::pixelsPerPoint() const
         return 0;
 
     return pixelSize/pointSize;
+}
+
+void UBGraphicsTextItem::setLineHeight(qreal lineHeight)
+{
+    if (lineHeight < 1 || lineHeight > 2)
+        return;
+
+    mLineHeight = lineHeight;
+
+    // seems like there is no better way to handle this at the moment
+    QString styleSheet = QString("p { line-height: %1 !important; }").arg(mLineHeight);
+    document()->setDefaultStyleSheet(styleSheet);
+
+    // remove old line-height property from html and trigger an internal update
+    // so that the new default stylesheet we previously set is applied
+    QString html = document()->toHtml().remove(QRegularExpression("line-height:[0-9]*%;"));
+    document()->setHtml(html);
+}
+
+qreal UBGraphicsTextItem::lineHeight() const
+{
+    return mLineHeight;
 }
 
 

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 13.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 14948)  -->
+
+<svg
+   version="1.2"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="26px"
+   height="26px"
+   viewBox="0 0 26 26"
+   xml:space="preserve"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="lineSpacing.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"><metadata
+   id="metadata15"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+   id="defs13"><radialGradient
+     id="SVGID_2_"
+     cx="65.513702"
+     cy="73.336899"
+     r="91.522102"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="matrix(0.12944356,0,0,0.12944356,4.5880495,8.4992167)">
+			<stop
+   offset="0"
+   style="stop-color:#F8DC00"
+   id="stop4" />
+			<stop
+   offset="1"
+   style="stop-color:#E76E34"
+   id="stop5" />
+			<a:midPointStop
+   offset="0"
+   style="stop-color:#F8DC00" />
+			<a:midPointStop
+   offset="0.5"
+   style="stop-color:#F8DC00" />
+			<a:midPointStop
+   offset="1"
+   style="stop-color:#E76E34" />
+		</radialGradient></defs><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1366"
+   inkscape:window-height="734"
+   id="namedview11"
+   showgrid="false"
+   inkscape:zoom="18.153846"
+   inkscape:cx="26.137712"
+   inkscape:cy="14.51483"
+   inkscape:window-x="309"
+   inkscape:window-y="210"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_1"
+   inkscape:showpageshadow="2"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showguides="false"><sodipodi:guide
+     position="20.189797,16.508474"
+     orientation="1,0"
+     id="guide3"
+     inkscape:locked="false" /></sodipodi:namedview>
+<circle
+   cx="13"
+   cy="13"
+   r="13"
+   id="circle3"
+   sodipodi:cx="13"
+   sodipodi:cy="13"
+   sodipodi:rx="13"
+   sodipodi:ry="13"
+   style="fill:#cccccc" />
+<circle
+   cx="13"
+   cy="13"
+   r="11"
+   id="circle5"
+   sodipodi:cx="13"
+   sodipodi:cy="13"
+   sodipodi:rx="11"
+   sodipodi:ry="11"
+   style="fill:#999999" />
+<rect
+   x="-9.4915257"
+   y="5.9864073"
+   width="4"
+   height="14.20339"
+   id="rect7"
+   transform="matrix(0,-1,1,0,0,0)"
+   style="fill:#ffffff" />
+
+<rect
+   style="fill:#ffffff"
+   x="-20.508474"
+   y="5.9864073"
+   width="4"
+   height="14.20339"
+   id="rect9-4"
+   transform="rotate(-90)" /><path
+   id="path5"
+   style="fill:url(#SVGID_2_);stroke:#e76e34;stroke-width:0.341784;stroke-dasharray:none;stroke-opacity:1"
+   d="m 12.977351,6.944056 -2.504054,3.074942 h 1.253536 v 1.821404 1.824426 1.821404 h -1.253536 l 2.504054,3.074942 2.507075,-3.074942 h -1.253538 v -1.821404 -1.824426 -1.821404 h 1.253538 z" /></svg>

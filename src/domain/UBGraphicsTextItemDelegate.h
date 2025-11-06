@@ -143,6 +143,7 @@ class UBGraphicsTextItemDelegate : public UBGraphicsItemDelegate
         DelegateButton* mDecreaseSizeButton;
         DelegateButton* mIncreaseSizeButton;
         DelegateButton* mAlignButton;
+        DelegateButton* mLineHeightButton;
 
         int mLastFontPixelSize;
 
@@ -181,6 +182,7 @@ class UBGraphicsTextItemDelegate : public UBGraphicsItemDelegate
         void increaseSize();
 
         void alignButtonProcess();
+        void showLineHeightMenu();
         void onCursorPositionChanged(const QTextCursor& cursor);
         void onModificationChanged(bool ch);
         void onContentChanged();

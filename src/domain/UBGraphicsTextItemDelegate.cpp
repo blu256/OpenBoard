@@ -111,6 +111,7 @@ UBGraphicsTextItemDelegate::UBGraphicsTextItemDelegate(UBGraphicsTextItem* pDele
     , mDecreaseSizeButton(0)
     , mIncreaseSizeButton(0)
     , mAlignButton(0)
+    , mLineHeightButton(0)
     , mLastFontPixelSize(-1)
     , delta(5)
 {
@@ -156,6 +157,12 @@ void UBGraphicsTextItemDelegate::createControls()
         mAlignButton = new AlignTextButton(":/images/plus.svg", mDelegated, mFrame, Qt::TitleBarArea);
         connect(mAlignButton, SIGNAL(clicked()), this, SLOT(alignButtonProcess()));
         mButtons << mAlignButton;
+    }
+
+    if (!mLineHeightButton) {
+        mLineHeightButton = new DelegateButton(":/images/lineHeight.svg", mDelegated, mFrame, Qt::TitleBarArea);
+        connect(mLineHeightButton, SIGNAL(clicked()), this, SLOT(showLineHeightMenu()));
+        mButtons << mLineHeightButton;
     }
 
     foreach(DelegateButton* button, mButtons)
@@ -218,6 +225,10 @@ void UBGraphicsTextItemDelegate::freeButtons()
     mButtons.removeOne(mAlignButton);
     delete mAlignButton;
     mAlignButton = 0;
+
+    mButtons.removeOne(mLineHeightButton);
+    delete mLineHeightButton;
+    mLineHeightButton = 0;
 
     UBGraphicsItemDelegate::freeButtons();
 }
@@ -414,6 +425,31 @@ void UBGraphicsTextItemDelegate::alignButtonProcess()
     }
 
     qDebug() << "sender process" << sndr;
+}
+
+void UBGraphicsTextItemDelegate::showLineHeightMenu()
+{
+    QMap<qreal, QString> values;
+    values[1.00] = tr("Single");
+    values[1.15] = tr("1,15");
+    values[1.25] = tr("1,25");
+    values[1.50] = tr("1,5");
+    values[2.00] = tr("Double");
+
+    QMenu lineHeightMenu;
+    lineHeightMenu.setTitle(tr("Line Height"));
+    for (auto it = values.cbegin(); it != values.cend(); ++it)
+    {
+        qreal lineHeight = it.key();
+        QAction *a = new QAction(it.value());
+        a->setCheckable(true);
+        a->setChecked(lineHeight == delegated()->lineHeight());
+        connect(a, &QAction::triggered, this, [lineHeight, a, this]() {
+            delegated()->setLineHeight(lineHeight);
+        });
+        lineHeightMenu.addAction(a);
+    }
+    lineHeightMenu.exec(QCursor::pos());
 }
 
 void UBGraphicsTextItemDelegate::onCursorPositionChanged(const QTextCursor &cursor)
